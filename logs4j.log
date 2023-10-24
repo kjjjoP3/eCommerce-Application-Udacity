@@ -1,0 +1,30 @@
+2023-10-24 13:53:12.987  INFO 45652 --- [main] com.example.demo.AuthCourseApplication   : Starting AuthCourseApplication on CVPTHANHBT29 with PID 45652 (D:\Test\eCommerce-Application-Udacity\target\classes started by ThanhBT29 in D:\Test\eCommerce-Application-Udacity)
+2023-10-24 13:53:12.994  INFO 45652 --- [main] com.example.demo.AuthCourseApplication   : No active profile set, falling back to default profiles: default
+2023-10-24 13:53:13.764  INFO 45652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-10-24 13:53:13.871  INFO 45652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 4 repository interfaces.
+2023-10-24 13:53:14.543  INFO 45652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$befed7fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-24 13:53:14.897  INFO 45652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-24 13:53:14.930  INFO 45652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-24 13:53:14.930  INFO 45652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2023-10-24 13:53:15.132  INFO 45652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-24 13:53:15.133  INFO 45652 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2049 ms
+2023-10-24 13:53:15.367  INFO 45652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-24 13:53:15.569  INFO 45652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-24 13:53:15.644  INFO 45652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-24 13:53:15.742  INFO 45652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2023-10-24 13:53:15.745  INFO 45652 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-10-24 13:53:15.951  INFO 45652 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2023-10-24 13:53:16.187  INFO 45652 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-24 13:53:17.273  INFO 45652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-24 13:53:18.179  WARN 45652 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-24 13:53:18.275  INFO 45652 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7676b2b9, org.springframework.security.web.context.SecurityContextPersistenceFilter@629de8, org.springframework.security.web.header.HeaderWriterFilter@19f1f330, org.springframework.web.filter.CorsFilter@720c0996, org.springframework.security.web.authentication.logout.LogoutFilter@21dd9203, com.example.demo.security.JWTAuthenticationFilter@7910e307, com.example.demo.security.JWTAuthenticationVerficationFilter@460aa24e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b6683c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@632b96b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5aa334c, org.springframework.security.web.session.SessionManagementFilter@41463c56, org.springframework.security.web.access.ExceptionTranslationFilter@19f99aaf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36d5c2ce]
+2023-10-24 13:53:18.443  INFO 45652 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-24 13:53:18.772  INFO 45652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-24 13:53:18.775  INFO 45652 --- [main] com.example.demo.AuthCourseApplication   : Started AuthCourseApplication in 6.261 seconds (JVM running for 7.292)
+2023-10-24 13:53:43.591  INFO 45652 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-10-24 13:53:43.594  INFO 45652 --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-10-24 13:53:43.597  INFO 45652 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-24 13:53:43.599  INFO 45652 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-24 13:53:43.604  INFO 45652 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

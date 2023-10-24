@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
+	
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
@@ -30,13 +31,20 @@ public class UserController {
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
+        log.info("findById user OK");
         return ResponseEntity.of(userRepository.findById(id));
     }
 
     @GetMapping("/{username}")
     public ResponseEntity<User> findByUserName(@PathVariable String username) {
         User user = userRepository.findByUsername(username);
-        return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
+        if (user == null) {
+            log.info("user not found");
+            return ResponseEntity.notFound().build();
+        } else {
+        	log.info("findByUserName ok");
+            return ResponseEntity.ok(user);
+        }
     }
 
     @PostMapping("/create")

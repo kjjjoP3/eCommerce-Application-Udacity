@@ -42,6 +42,18 @@ public class UserOrder {
     @Column
     private BigDecimal total;
 
+    public UserOrder() {
+        // Default constructor
+    }
+
+    public UserOrder(Cart cart, User user, Long id) {
+        this.items = cart.getItems();
+        this.total = cart.getTotal();
+        this.user = user;
+        this.id = id;
+    }
+
+    
     public Long getId() {
         return id;
     }

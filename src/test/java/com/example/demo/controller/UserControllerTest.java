@@ -2,6 +2,9 @@ package com.example.demo.controller;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -56,5 +59,45 @@ public class UserControllerTest {
         assertEquals("test", user.getUsername());
         assertEquals("thisIsHashed", user.getPassword());
 
+    }
+    
+    @Test
+    public void testFindById() {
+        long id = 1L;
+        User user = new User();
+        user.setUsername("test");
+        user.setPassword("testPassword");
+        user.setId(id);
+
+        when(userRepository.findById(id)).thenReturn(Optional.of(user));
+
+        ResponseEntity<User> response = userController.findById(id);
+
+        validateUserResponse(response, id, "test", "testPassword");
+    }
+
+    @Test
+    public void testFindByUserName() {
+        long id = 1L;
+        User user = new User();
+        user.setUsername("test");
+        user.setPassword("testPassword");
+        user.setId(id);
+
+        when(userRepository.findByUsername("test")).thenReturn(user);
+
+        ResponseEntity<User> response = userController.findByUserName("test");
+
+        validateUserResponse(response, id, "test", "testPassword");
+    }
+
+    private void validateUserResponse(ResponseEntity<User> response, long id, String username, String password) {
+        assertEquals(200, response.getStatusCodeValue());
+
+        User actualUser = response.getBody();
+        assertNotNull(actualUser);
+        assertEquals(id, actualUser.getId());
+        assertEquals(username, actualUser.getUsername());
+        assertEquals(password, actualUser.getPassword());
     }
 }
